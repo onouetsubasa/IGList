@@ -22,6 +22,10 @@
 		A5AC649320DF461E00682519 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5AC649120DF461E00682519 /* UserListCell.xib */; };
 		A5AC649620DF4C7600682519 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC649520DF4C7600682519 /* UserListViewController.swift */; };
 		A5AC649820DF4C8D00682519 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AC649720DF4C8D00682519 /* UserList.storyboard */; };
+		A5C2857A20DF90260078A654 /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2857920DF90260078A654 /* RandomGenerator.swift */; };
+		A5C2857D20DF90810078A654 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2857C20DF90810078A654 /* UIColor+Extension.swift */; };
+		A5C2857F20DF90B50078A654 /* ObjectMapper+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2857E20DF90B50078A654 /* ObjectMapper+Extension.swift */; };
+		A5C2858120DF91090078A654 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C2858020DF91090078A654 /* UIFont+Extension.swift */; };
 		DBC8B2F656D1CBB4CA06EA2B /* Pods_IGListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56A2921A5E299E1219968E2 /* Pods_IGListUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,10 @@
 		A5AC649120DF461E00682519 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
 		A5AC649520DF4C7600682519 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		A5AC649720DF4C8D00682519 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		A5C2857920DF90260078A654 /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		A5C2857C20DF90810078A654 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A5C2857E20DF90B50078A654 /* ObjectMapper+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Extension.swift"; sourceTree = "<group>"; };
+		A5C2858020DF91090078A654 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		E56A2921A5E299E1219968E2 /* Pods_IGListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +144,8 @@
 		A5AC645B20DF2A6100682519 /* IGList */ = {
 			isa = PBXGroup;
 			children = (
+				A5C2857B20DF90670078A654 /* Extension */,
+				A5C2857820DF900C0078A654 /* Common */,
 				A5AC648A20DF2F4C00682519 /* Model */,
 				A5AC648D20DF398B00682519 /* View */,
 				A5AC645C20DF2A6100682519 /* AppDelegate.swift */,
@@ -192,6 +202,24 @@
 				A5AC649120DF461E00682519 /* UserListCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A5C2857820DF900C0078A654 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2857920DF90260078A654 /* RandomGenerator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A5C2857B20DF90670078A654 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2857C20DF90810078A654 /* UIColor+Extension.swift */,
+				A5C2857E20DF90B50078A654 /* ObjectMapper+Extension.swift */,
+				A5C2858020DF91090078A654 /* UIFont+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D9BB6694A9606279F5B67740 /* Pods */ = {
@@ -421,12 +449,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C2857A20DF90260078A654 /* RandomGenerator.swift in Sources */,
 				A5AC649220DF461E00682519 /* UserListCell.swift in Sources */,
 				A5AC645F20DF2A6100682519 /* ViewController.swift in Sources */,
+				A5C2857F20DF90B50078A654 /* ObjectMapper+Extension.swift in Sources */,
 				A5AC645D20DF2A6100682519 /* AppDelegate.swift in Sources */,
 				A5AC648F20DF39B100682519 /* UserSectionController.swift in Sources */,
 				A5AC648C20DF2F6D00682519 /* User.swift in Sources */,
 				A5AC649620DF4C7600682519 /* UserListViewController.swift in Sources */,
+				A5C2858120DF91090078A654 /* UIFont+Extension.swift in Sources */,
+				A5C2857D20DF90810078A654 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
