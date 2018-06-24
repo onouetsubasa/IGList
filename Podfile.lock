@@ -1,0 +1,24 @@
+PODS:
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - ObjectMapper (3.3.0)
+
+DEPENDENCIES:
+  - IGListKit (~> 3.0)
+  - ObjectMapper
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IGListKit
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+
+PODFILE CHECKSUM: ddc27bb7f29695ce7517cb728ff8e211c886f326
+
+COCOAPODS: 1.5.0
