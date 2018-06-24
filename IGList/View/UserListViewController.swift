@@ -20,13 +20,7 @@ final class UserListViewController: UIViewController {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    private lazy var users: [User] = [
-        User(id: 0, name: "あいお", email: "dsa", image: "tre"),
-        User(id: 1, name: "fdsfdsfsf", email: "dsafr", image: "tre"),
-        User(id: 2, name: "こうぬhdふぃうさf", email: "dsdasdfsfsv", image: "tre"),
-        User(id: 3, name: "こうdふぃうさf", email: "dsdasdfsfsv", image: "tre"),
-        User(id: 4, name: "こうぬぃうさf", email: "dsdfsfsv", image: "tre"),
-    ]
+    private var users: [User]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +29,22 @@ final class UserListViewController: UIViewController {
         // Do any additional setup after loading the view.
         adapter.collectionView = userListCollectionView
         adapter.dataSource = self
+        
+        setDatas()
+    }
+    
+    //ランダムなデータを導入
+    private func setDatas() {
+        var initialUsers: [User] = []
+        for _ in 0..<10 {
+            let user = User.makeMock()
+            let isIncludeId = initialUsers.filter { $0.id == user.id }
+            if isIncludeId.count == 0 || isIncludeId.isEmpty {
+                initialUsers.append(user)
+            }
+        }
+        users = initialUsers
+        adapter.performUpdates(animated: true, completion: nil)
     }
     
     private func setupObjects() {
@@ -52,20 +62,20 @@ final class UserListViewController: UIViewController {
     
     //データの追加
     @IBAction func addData(_ sender: Any) {
-        var newUsers: [User] = []
-        if let lastUserId = users.last?.id {
-            for i in (lastUserId + 1)..<(lastUserId + 3) {
-                let user = User(id: i, name: "\(i),太郎", email: "dsa", image: "dfsa")
-                newUsers.append(user)
+        for _ in 0..<5 {
+            let user = User.makeMock()
+            let isIncludeId = users?.filter { $0.id == user.id }
+            
+            if isIncludeId?.count == 0 || (isIncludeId?.isEmpty)! {
+                users?.append(user)
             }
-            users.append(contentsOf: newUsers)
-            adapter.performUpdates(animated: true, completion: nil)
         }
+        adapter.performUpdates(animated: true, completion: nil)
     }
     
     //データの更新
     @IBAction func changeData(_ sender: Any) {
-        users[0] = User(id: 0, name: "sa", email: "fdsa", image: "das")
+        users?[0] = User(id: 0, name: "sa", email: "fdsa", image: "das")
         
         adapter.performUpdates(animated: true, completion: nil)
     }
@@ -73,7 +83,11 @@ final class UserListViewController: UIViewController {
 
 extension UserListViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return users as [ListDiffable]
+        if let _users = users {
+            return _users
+        } else {
+            return [ListDiffable]()
+        }
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {

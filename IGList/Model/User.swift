@@ -37,3 +37,15 @@ extension User: ListDiffable {
         return false
     }
 }
+
+extension User {
+    
+    static func makeMock() -> User {
+        let user = User(id: RandomGenerator.generateInt(max: 128),
+                        name: RandomGenerator.generateString(),
+                        email: RandomGenerator.generateAlphabetString(),
+                        image: RandomGenerator.generateImageURL()
+        )
+        return user
+    }
+}

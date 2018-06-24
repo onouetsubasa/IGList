@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
   - IGListKit/Default (3.4.0):
@@ -7,18 +10,24 @@ PODS:
   - ObjectMapper (3.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireImage (~> 3.3)
   - IGListKit (~> 3.0)
   - ObjectMapper
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireImage
     - IGListKit
     - ObjectMapper
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
 
-PODFILE CHECKSUM: ddc27bb7f29695ce7517cb728ff8e211c886f326
+PODFILE CHECKSUM: 735228b098cdebbec4839544263ab05b461c21cc
 
 COCOAPODS: 1.5.0

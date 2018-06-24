@@ -8,6 +8,9 @@ target 'IGList' do
   # Pods for IGList
   pod 'IGListKit', '~> 3.0'
   pod 'ObjectMapper'
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.3'
+
 
   target 'IGListTests' do
     inherit! :search_paths

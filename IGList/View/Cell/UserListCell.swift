@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class UserListCell: UICollectionViewCell {
     
@@ -22,10 +23,16 @@ final class UserListCell: UICollectionViewCell {
     
     private func initSet() {
         backgroundColor = .white
+        
+        userImage.layer.cornerRadius = userImage.bounds.width / 2
+        userImage.layer.masksToBounds = true
     }
     
     func setupContents(user: User) {
         nameLabel.text = user.name
         mailLabel.text = user.email
+        
+        let imageUrl = URL(string: user.image)
+        userImage.af_setImage(withURL: imageUrl!)
     }
 }
