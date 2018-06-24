@@ -16,6 +16,7 @@
 		A5AC646720DF2A6200682519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AC646520DF2A6200682519 /* LaunchScreen.storyboard */; };
 		A5AC647220DF2A6300682519 /* IGListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC647120DF2A6300682519 /* IGListTests.swift */; };
 		A5AC647D20DF2A6300682519 /* IGListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC647C20DF2A6300682519 /* IGListUITests.swift */; };
+		A5AC648C20DF2F6D00682519 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC648B20DF2F6D00682519 /* User.swift */; };
 		DBC8B2F656D1CBB4CA06EA2B /* Pods_IGListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56A2921A5E299E1219968E2 /* Pods_IGListUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		A5AC647820DF2A6300682519 /* IGListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AC647C20DF2A6300682519 /* IGListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGListUITests.swift; sourceTree = "<group>"; };
 		A5AC647E20DF2A6300682519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AC648B20DF2F6D00682519 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E56A2921A5E299E1219968E2 /* Pods_IGListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		A5AC645B20DF2A6100682519 /* IGList */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC648A20DF2F4C00682519 /* Model */,
 				A5AC645C20DF2A6100682519 /* AppDelegate.swift */,
 				A5AC645E20DF2A6100682519 /* ViewController.swift */,
 				A5AC646020DF2A6100682519 /* Main.storyboard */,
@@ -150,6 +153,14 @@
 				A5AC647E20DF2A6300682519 /* Info.plist */,
 			);
 			path = IGListUITests;
+			sourceTree = "<group>";
+		};
+		A5AC648A20DF2F4C00682519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC648B20DF2F6D00682519 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D9BB6694A9606279F5B67740 /* Pods */ = {
@@ -379,6 +390,7 @@
 			files = (
 				A5AC645F20DF2A6100682519 /* ViewController.swift in Sources */,
 				A5AC645D20DF2A6100682519 /* AppDelegate.swift in Sources */,
+				A5AC648C20DF2F6D00682519 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +567,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -571,7 +586,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -588,7 +606,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -606,7 +628,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -623,7 +649,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -640,7 +670,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RELRRHCKXU;
 				INFOPLIST_FILE = IGListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = onoue.IGListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
