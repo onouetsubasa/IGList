@@ -6,37 +6,34 @@
 //  Copyright © 2018年 onoue. All rights reserved.
 //
 
-import ObjectMapper
 import IGListKit
 
-class User: Mappable {
+class User {
     
-    var id: Int!
-    var name: String!
-    var email: String!
+    let id: Int!
+    let name: String!
+    let email: String!
+    let image: String!
     
-    required init?(map: Map) {
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        name <- map["name"]
-        email <- map["eail"]
+    init(id: Int, name: String, email: String, image: String) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.image = image
     }
 }
 
 extension User: ListDiffable {
-    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        if let user = object as? User {
-            return id == user.id
-        }
-        
-        return false
-    }
-    
     
     func diffIdentifier() -> NSObjectProtocol {
         return id as NSObjectProtocol
     }
     
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        if let user = object as? User {
+            return name == user.name
+        }
+
+        return false
+    }
 }
